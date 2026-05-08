@@ -1,0 +1,241 @@
+<html>
+<head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="format.css">
+        <style type="text/css">
+                <!--
+                        a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                        a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                        a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+                -->
+        </style>
+</head>
+<body>
+<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+         folgenden.</p>
+</iframe>
+
+<!-- Aufgabe 1 -->
+
+<h1>Uebung 1</h1>
+
+<h2>Aufgabe 1a</h2>
+<h3>Musikaufnahme</h3>
+<p>Zuvor</p>
+<audio controls><source src="audio/Abgabe_1/musik_02.wav" type="audio/wav"></audio>
+<p>Nachher</p>
+<audio controls><source src="audio/Abgabe_1/Musik_ÜG2.wav" type="audio/wav"></audio>
+
+<h3>Sprachaufnahme</h3>
+<p>Zuvor</p>
+<audio controls><source src="audio/Abgabe_1/sprache_02.wav" type="audio/wav"></audio>
+<p>Nachher</p>
+<audio controls><source src="audio/Abgabe_1/sprache_ÜG2.wav" type="audio/wav"></audio>
+
+<h2>Augabe 1b</h2>
+<h3>Warum gibt es verschiedene Abstastfrequenzen?</h3>
+<p>- Sprache enthält nur tiefe bis mittlere Frequenzen.</p>
+<p>- Musik hingegen enthält das gesamte hörbare Frequenzspektrum.</p>
+
+<h2>Augabe 1c</h2>
+<h3>Zwei Audiofiles einlesen, header erklären, bitrate bestimmen</h3>
+
+<table style="padding: 12px; border-width: 1px; border-style: solid; border-color: black;">
+        <tr>
+                <th>Attribute</th>
+                <th>Musik</th>
+                <th>Sprache</th>
+                <th>Erklärung</th>
+        </tr>
+        <tr>
+                <td>Channels</td>
+                <td>2 Channels</td>
+                <td>2 Channel</td>
+                <td>Anzahl der Audiokanäle für Stereo und Mono</td>
+        </tr>
+        <tr>
+                <td>Sample Rate</td>
+                <td>44.1 kHz</td>
+                <td>8 kHz</td>
+                <td>Abtastfrequenz, bestimmt die höchste eindeutig erfassbare Frequenz.</td>
+        </tr>
+        <tr>
+                <td>Valid Bits</td>
+                <td>16 bit</td>
+                <td>16 bit</td>
+                <td>Rundungsauflösung pro Sample.</td>
+        </tr>
+        <tr>
+                <td>Bytes pro Sample</td>
+                <td>2 Byte pro Sample</td>
+                <td>2 Byte pro Sample</td>
+                <td>16 bit sind 2 Byte.</td>
+        </tr>
+        <tr>
+                <td>Frames</td>
+                <td>220824 Frames</td>
+                <td>220824 Frames</td>
+                <td>Anzahl der Zeitpunkte, ergibt sich aus Dauer und Sample Rate.</td>
+        </tr>
+</table>
+<img style="height: 360px; width: 200px;" src="pics/Abgabe_1/Header.jpeg" alt="">
+
+<h2>Augabe 1d</h2>
+<p>Allgemeine Berechnung:</p>
+<p>Bitrate = Abstatfrequenz * Bit-Depth * Anzahl der Kanäle</p>
+<h3>Musik_ÜG2</h3>
+<p>Berechnung -> 44100 * 16 * 2 = 1411200 Bit/s</p>
+<h3>Sprache_ÜG2</h3>
+<p>Berechnung -> 8000 * 16 * 1 = 128000 Bit/s</p>
+<br><hr style="width: 50%;">
+
+<!-- Aufgabe 2 -->
+
+<br><h3>Aufgabe 2a</h3>
+<p>Aliasing</p>
+
+<h3>Sine_hi03.wav</h3>
+<p>Zuvor</p>
+<audio controls><source src="audio/Abgabe_1/musik_02.wav" type="audio/wav"></audio>
+<p>Nachher</p>
+<a href="audio/Abgabe_1/sine_hi03.wav.txt">Sine_hi03.wav.txt</a>
+
+<br><br>
+
+<h3>Sine_lo03.wav</h3>
+<p>Zuvor</p>
+<audio controls><source src="audio/Abgabe_1/musik_02.wav" type="audio/wav"></audio>
+<p>Nachher</p>
+<a href="audio/Abgabe_1/sine_lo03.wav.txt">Sine_lo03.wav.txt</a>
+
+<p>Schätzung:</p>
+<p>Die erste Sinussequenzen wird eine Frequenz von 6149Hz haben.</p>
+<p>Die Zweite Sinussequenzen wird eine Frequenz von 3120Hz haben.</p>
+<p>weil f = 1/T</p>
+<p>Dabei gilt f = Frequenz in Hz und T = Periodendauer in Sekunden.</p>
+
+<h2>Aufgabe 2b</h2>
+<img style="width: 450; height: 270;" src="pics/Abgabe_1/Sine_hi03.jpeg" alt="SineHigh">
+<img style="width: 450; height: 270;" src="pics/Abgabe_1/Sine_lo03.jpeg" alt="SineLow">
+
+<h2>Aufgabe 2c</h2>
+<img style="width: 450; height: 270;" src="pics/Abgabe_1/Abtastungtheorem.jpeg" alt="">
+<h3>Abtasttheorem:</h3>
+<p>Das Abtasttheorem besagt, dass ein anloges Singal (wie Ton oder Bild) fehlerfrei Digitalisiert und wieder hergestellt werden kann,</p>
+<p>wenn die Abtastfrequenz mehr als doppelt so hoch ist wie die höchste enthaltene Signalfrequenz. <b>Formel: fa > 2 * fmax</b></p>
+<hr style="width: 50%;">
+
+<!-- Aufgabe 3 -->
+
+<h2>Aufgabe 3</h2>
+<h3>Aufgabe 3a</h3>
+<p>16/8 Bit Amplitudenwerte</p>
+<p>Rechnung: 2^bits</p>
+<p>2^8 bits = 256 Amplitudenwerte</p>
+<p>2^16 bits = 65.536 Amplitudenwerte</p>
+
+<h3>Aufgabe 3b</h3>
+<img style="width: 450; height: 75;" src="pics/Abgabe_1/3b.jpeg" alt="sourceCode"
+<br>
+<p>Die Bitanzahl wurde im bitreduce Modus reduziert.</p>
+<p>Die Samples werden erst durch 2^n geteilt (Integer-Division ohne Rest) und danach mit 2^n multipliziert,</p>
+<p>sodass die Lautstärke mehr oder weniger erhalten bleibt</p>
+<p>Der Datentyp bleibt bei 16 bit.</p>
+<br>
+<p>- Rechts-Shift (>>) schneidet die untersten Bits ab (= Ganzzahldivision durch 2ⁿ)</p>
+<p>- Links-Shift (<<) stellt die ursprüngliche Größenordnung wieder her (=Multiplikation mit 2^n)</p>
+<p>- Abgeschnittene Information (die feinen Amplitudenabstufungen) ist aber verloren.</p>
+
+<h4>Bitreduzierte Dateien</h4>
+<p>1 Bit Musik</p>
+<audio controls><source src="audio/Abgabe_1/musik_bit1_reduced.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/musik_bit1_reduced.wav">musik_bit1_reduced.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Musik_Bit1_red.jpeg" alt="">
+
+<br>
+<p>12 Bit Musik</p>
+<audio controls><source src="audio/Abgabe_1/musik_bit12_reduced.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/musik_bit12_reduced.wav">musik_bit12_reduced.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Musik_Bit12_red.jpeg" alt="">
+
+<br>
+<p>1 Bit Sprache</p>
+<audio controls><source src="audio/Abgabe_1/sprache_bit1_reduced.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/sprache_bit1_reduced.wav">sprache_bit1_reduced.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Sprache_Bit1_red.jpeg" alt="">
+
+<br>
+<p>12 Bit Sprache</p>
+<audio controls><source src="audio/Abgabe_1/sprache_bit12_reduced.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/sprache_bit12_reduced.wav">sprache_bit12_reduced.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Sprache_Bit12_red.jpeg" alt="">
+
+
+
+
+<h3>Aufgabe 3c</h3>
+<p>Musik: deutliche Verschlechterung unter 12 Bit</p>
+<p>Sprache: noch verständlich bis zu 2-4 Bit</p>
+<p>Ab 16 Bit sind räusche praktischnicht nicht mehr hörbar.</p>
+
+<h3>Aufgabe 3d</h3>
+<h4>1. Signalabhängigkeit</h4>	
+<p>- quantisierungsrauschen hängt direkt vom Nutzsignal ab</p> 
+<p>-> entsteht nur dort, wo Signal vorhanden ist</p>
+
+<br>
+
+<h4>2. Harmonische Verzerrung</h4>
+<p>- Fehler enstehen durch ganzzahlige Rundung</p>
+<p>- periodisch strukturiert, nicht zufällig</p>
+
+<br>
+
+<h4>3. Granulationsrauschen bei leisen stellen</h4>
+<p>- Amplitude sehr klein, es werden nur sehr wenige Quantisierungsstufen genutzt</p>
+
+<h3>Aufgabe 3e</h3>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/3e.jpeg" alt="sourceCode"
+<br>
+<p>Je mehr Bits reduziert werden, desto kleiner der Verstärkungsfaktor.</p> 
+<p>Das ist absichtlich, da bei starker Reduzierung der Fehler ohnehin größer ist und sonst ein Überlauf (short-Clipping) 
+entstehen würde.</p> 
+<p>Das Clipping-Check am Ende verhindert auftretende Überläufe.</p> <br>
+
+<h4>Differenzsignale</h4>
+<p>1 Bit Musik</p>
+<audio controls><source src="audio/Abgabe_1/musik_bit1_reduced_diff.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/musik_bit1_reduced_diff.wav">musik_bit1_reduced_diff.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Musik_Bit1_diff.jpeg" alt="">
+<br>
+<p>12 Bit Musik</p>
+<audio controls><source src="audio/Abgabe_1/musik_bit12_reduced_diff.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/musik_bit12_reduced_diff.wav">musik_bit12_reduced_diff.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Musik_Bit12_diff.jpeg" alt="">
+<br>
+<p>1 Bit Sprache</p>
+<audio controls><source src="audio/Abgabe_1/sprache_bit1_reduced_diff.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/sprache_bit1_reduced_diff.wav">sprache_bit1_reduced_diff.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Sprache_Bit1_diff.jpeg" alt="">
+<br>
+<p>12 Bit Sprache</p>
+<audio controls><source src="audio/Abgabe_1/sprache_bit12_reduced_diff.wav" type="audio/wav"></audio> <br>
+<a href="audio/Abgabe_1/sprache_bit12_reduced_diff.wav">sprache_bit12_reduced_diff.wav</a> <br>
+<img style="width: 400; height: 240;" src="pics/Abgabe_1/Sprache_Bit12_diff.jpeg" alt="">
+
+<br>
+
+<h3>Aufgabe 3f</h3>
+<p>- Quantisierungsfehler kann nur die Werte 0 oder 1 annehmen</p>
+<p>- differenzsignal ist simpel, klingt nach einem hochfrequenten, gleichmäßigen knistern</p>
+<br>
+<p>Mit zunehmender Bit-Reduktion verändert sich der Charakter des Rauschens</p>
+<p>Wenige bits reduziert: </p> 
+<p>- rauschen ist zufällig und gleichmäßig, vom Signal unabhängig</p>
+<br>
+<p>Viele bits reduziert:</p>
+<p>- typisches Quantisierungsgeräusch</p>
+<p>- bei Musik: Verzerren, das mit dem Rhythmus geht</p>
+</body>
+</html>
