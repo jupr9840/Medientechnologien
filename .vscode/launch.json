@@ -9,6 +9,8 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
+            //Passe nur die Datei nach Abgabe_2/. an!!!
+            //Kein Plan, ob man die JSON in Intellij IDEA braucht.
             "args": [
                 "${workspaceFolder}/Abgabe/pics/Abgabe_2/Nature_ÜG2.bmp"
             ]
