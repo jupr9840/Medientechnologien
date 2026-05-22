@@ -60,7 +60,7 @@ public final class bmp_io {
 				
 			}
 		}
-		
+		//HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 		// bitreduzierung
 		int reduced_bits = 1;
 		for(int y = 0; y < bmp.image.getHeight(); y++) {
