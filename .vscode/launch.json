@@ -12,7 +12,7 @@
             //Passe nur die Datei nach Abgabe_2/. an!!!
             //Kein Plan, ob man die JSON in Intellij IDEA braucht.
             "args": [
-                "${workspaceFolder}/Abgabe/pics/Abgabe_2/Nature_ÜG2.bmp"
+                "${workspaceFolder}/Abgabe/pics/Abgabe_2/BMP_Bild/Nature_ÜG2.bmp"
             ]
         }
     ]
